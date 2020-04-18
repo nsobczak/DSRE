@@ -10,24 +10,26 @@
 
 ## Init
 
-- create empty project
-- create maps: menu, playground, level01
-- add main character (player controller, 3D asset)
-- add input from old project
-- attach camera to character (only movement, no rotation)
-- add hud script from old project
-- add hud widget and link life and pickup to character
+- create empty project => ok
+- create maps: menu => ok, playground => ok
+- add main character (player controller  => ok, 3D asset => ok)
+- add input from old project => ok
+- attach camera to character (only movement, no rotation) => ok
+- add hud script from old project => ok
+- add hud widget and link life and pickup to character => ok
 - add sword and shield assets
 - activate/deactivate bCanBeHit and bCanHit with animNotify
 
 ## Next steps
 
 - use sm_cubes with collisions for floor and walls
+- add pickups
 - create foe (wolf from infinity blade)
 - migrate ai from old project (add nav mesh on floor)
 - use cel shading?
-- fog of war
 - create ludum dare account
+- create level01 map
+- fog of war
 
 ## Optional
 

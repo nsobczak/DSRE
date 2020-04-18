@@ -17,11 +17,11 @@ AGM_BasicCombat::AGM_BasicCombat()
 		DefaultPawnClass = PlayerPawnObject.Class;
 	}
 
-	static ConstructorHelpers::FClassFinder<AHUD> HUDObject(TEXT("/Game/HUD/BPHUD_Playground"));
-	if (HUDObject.Succeeded())
-	{
-		HUDClass = HUDObject.Class;
-	}
+	//static ConstructorHelpers::FClassFinder<AHUD> HUDObject(TEXT("/Game/HUD/BPHUD_Main"));
+	//if (HUDObject.Succeeded())
+	//{
+	//	HUDClass = HUDObject.Class;
+	//}
 
 	static ConstructorHelpers::FClassFinder<APlayerController> PCObject(TEXT("/Game/PlayerController/BP_BCController"));
 	if (PCObject.Succeeded())

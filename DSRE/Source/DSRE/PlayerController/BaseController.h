@@ -25,6 +25,8 @@ public:
 #pragma region Properties
 	UFUNCTION(BlueprintPure, Category = "Properties")
 		FORCEINLINE float GetLife() const { return Life; };
+	UFUNCTION(BlueprintPure, Category = "Properties")
+		FORCEINLINE float GetMaxLife() const { return MaxLifeValue; };
 	UFUNCTION(Exec, BlueprintCallable, Category = "Properties")
 		void AddLife(float amountToAdd = -1.f) { Life += amountToAdd; };
 	UFUNCTION(Exec, BlueprintCallable, Category = "Properties")
