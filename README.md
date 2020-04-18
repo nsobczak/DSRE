@@ -31,6 +31,12 @@
 
 ## Optional
 
+- cel shading
+- use plugin for lifebar
 - wall invisible/transparent when player is behind
 - add dash
 - lock enemy
+
+## Before Build
+
+- change inputs to qwerty
