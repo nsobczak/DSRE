@@ -33,7 +33,7 @@
 - audio sound effects (footsteps => ok, pickups => ok, impacts)
 - create ludum dare account => ok
 - create level01 map (sm_cubes with collisions for floor and walls)
-- character orientation
+- character orientation => ok
 - enemy walk anim
 - build game
 - upload game
@@ -59,8 +59,8 @@
 
 ## World assets
 - Heart room
-- straight line
-- corner right
-- corner left
-- T
-- room squared
+- vein straight line
+- vein corner right
+- vein corner left
+- vein T
+- vein room squared
