@@ -18,7 +18,7 @@
 - add hud script from old project => ok
 - add hud widget and link life and pickup to character => ok
 - add sword and shield assets => ok
-- activate/deactivate bCanBeHit and bCanHit with animNotify
+- activate/deactivate bCanBeHit and bCanHit with animNotify => ok
 
 ## Next steps
 
@@ -26,10 +26,12 @@
 - add pickups => ok
 - create foe (wolf from infinity blade)
 - migrate ai from old project (add nav mesh on floor)
-- audio sound effects
-- create ludum dare account
+- audio sound effects (footsteps => ok, pickups => ok, impacts)
+- create ludum dare account => ok
 - create level01 map
 - fog of war
+- build game
+- upload game
 
 ## Optional
 

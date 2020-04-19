@@ -10,13 +10,16 @@
 
 ABCController::ABCController()
 {
-	PrimaryActorTick.bCanEverTick = true; 
+	PrimaryActorTick.bCanEverTick = true;
 	PrimaryActorTick.bTickEvenWhenPaused = true;
 }
 
 void ABCController::BeginPlay()
 {
 	Super::BeginPlay();
+
+	bCanHit = false;
+	bCanBeHit = true;
 
 	////Look for hitregion to control activation
 	//TArray<AActor*> FoundActors;
@@ -37,14 +40,14 @@ void ABCController::SetupInputComponent()
 {
 	Super::SetupInputComponent();
 
-	InputComponent->BindAction("Attack", EInputEvent::IE_Pressed, this, &ABCController::ActionButton1_Pressed);
-	InputComponent->BindAction("Attack", EInputEvent::IE_Released, this, &ABCController::ActionButton1_Released);
-	InputComponent->BindAction("Defend", EInputEvent::IE_Pressed, this, &ABCController::ActionButton2_Pressed);
-	InputComponent->BindAction("Defend", EInputEvent::IE_Released, this, &ABCController::ActionButton2_Released);
-	InputComponent->BindAction("Dodge", EInputEvent::IE_Pressed, this, &ABCController::ActionButton3_Pressed);
-	InputComponent->BindAction("Dodge", EInputEvent::IE_Released, this, &ABCController::ActionButton3_Released);
-	InputComponent->BindAction("Action", EInputEvent::IE_Pressed, this, &ABCController::ActionButton4_Pressed);
-	InputComponent->BindAction("Action", EInputEvent::IE_Released, this, &ABCController::ActionButton4_Released);
+	//InputComponent->BindAction("Attack", EInputEvent::IE_Pressed, this, &ABCController::ActionButton1_Pressed);
+	//InputComponent->BindAction("Attack", EInputEvent::IE_Released, this, &ABCController::ActionButton1_Released);
+	//InputComponent->BindAction("Defend", EInputEvent::IE_Pressed, this, &ABCController::ActionButton2_Pressed);
+	//InputComponent->BindAction("Defend", EInputEvent::IE_Released, this, &ABCController::ActionButton2_Released);
+	//InputComponent->BindAction("Dodge", EInputEvent::IE_Pressed, this, &ABCController::ActionButton3_Pressed);
+	//InputComponent->BindAction("Dodge", EInputEvent::IE_Released, this, &ABCController::ActionButton3_Released);
+	//InputComponent->BindAction("Action", EInputEvent::IE_Pressed, this, &ABCController::ActionButton4_Pressed);
+	//InputComponent->BindAction("Action", EInputEvent::IE_Released, this, &ABCController::ActionButton4_Released);
 	InputComponent->BindAction("Start", EInputEvent::IE_Pressed, this, &ABCController::ActionButtonStart).bExecuteWhenPaused = true;
 	InputComponent->BindAction("Select", EInputEvent::IE_Pressed, this, &ABCController::ActionButtonSelect).bExecuteWhenPaused = true;
 }
@@ -117,18 +120,18 @@ void ABCController::ActionButtonStart()
 		//}
 		//else
 		//{
-			Pause();
+		Pause();
 
-			if (IsPaused())
-			{
-				gm->GetHUDBase()->ShowPauseWidget();
-				gm->GetHUDBase()->ShowCursor(this, true);
-			}
-			else
-			{
-				gm->GetHUDBase()->ShowHUDWidget();
-				gm->GetHUDBase()->ShowCursor(this, false);
-			}
+		if (IsPaused())
+		{
+			gm->GetHUDBase()->ShowPauseWidget();
+			gm->GetHUDBase()->ShowCursor(this, true);
+		}
+		else
+		{
+			gm->GetHUDBase()->ShowHUDWidget();
+			gm->GetHUDBase()->ShowCursor(this, false);
+		}
 		//}
 	}
 	else

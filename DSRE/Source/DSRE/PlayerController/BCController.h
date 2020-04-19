@@ -43,12 +43,24 @@ public:
 		void ActionButtonSelect();
 #pragma endregion
 
+	UFUNCTION(BlueprintPure, Category = "State")
+		FORCEINLINE bool GetCanHit() const { return bCanHit; };
+	UFUNCTION(Exec, BlueprintCallable, Category = "State")
+		void SetCanHit(bool canHit) { bCanHit = canHit; };
+
+	UFUNCTION(BlueprintPure, Category = "State")
+		FORCEINLINE bool GetCanBeHit() const { return bCanBeHit; };
+	UFUNCTION(Exec, BlueprintCallable, Category = "State")
+		void SetCanBeHit(bool canBeHit) { bCanBeHit = canBeHit; };
 
 protected:
 	virtual void BeginPlay() override;
 
-	///**Whether to block inputs or not*/
-	//UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Info")
-	//	bool ShouldInputBeEnabled = false;
+	/**Whether to enable damage on enemy or not*/
+	UPROPERTY(VisibleAnywhere, Category = "State")
+		bool bCanHit = false;
+	/**Whether to enable damage on self or not*/
+	UPROPERTY(VisibleAnywhere, Category = "State")
+		bool bCanBeHit = true;
 
 };
