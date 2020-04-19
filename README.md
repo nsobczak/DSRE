@@ -22,19 +22,21 @@
 
 ## Next steps
 
-- use sm_cubes with collisions for floor and walls
 - add pickups => ok
-- create foe (wolf from infinity blade)
-- migrate ai from old project (add nav mesh on floor)
+- create foe (wolf from infinity blade) => ok
+- create ai (see old project + add nav mesh on floor) => ok
+- add damage
 - audio sound effects (footsteps => ok, pickups => ok, impacts)
 - create ludum dare account => ok
-- create level01 map
-- fog of war
+- create level01 map (sm_cubes with collisions for floor and walls)
+- character orientation
+- enemy walk anim
 - build game
 - upload game
 
 ## Optional
 
+- fog of war
 - audio music
 - cel shading
 - use plugin for lifebar
