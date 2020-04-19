@@ -28,7 +28,8 @@ public:
 	/**function to call when the pickup is collected*/
 	UFUNCTION(BlueprintNativeEvent)
 		void WasCollected();
-	virtual void WasCollected_Implementation();
+	UFUNCTION(BlueprintCallable, Category = "Pickup")
+		virtual void WasCollected_Implementation();
 
 protected:
 	virtual void BeginPlay() override;

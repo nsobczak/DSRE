@@ -22,6 +22,9 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "GameMode_Parameters")
 		FORCEINLINE  class AHUD_Base* GetHUDBase() const { return HUDBase; };
+	
+	UFUNCTION(BlueprintCallable, Category = "GameMode_Parameters")
+		FORCEINLINE  class APlayerController* GetPControllerBase() const { return PControllerBase; };
 
 	UFUNCTION(BlueprintPure, Category = "Track")
 		FORCEINLINE bool GetIsGameOver() const { return bIsGameOver; };

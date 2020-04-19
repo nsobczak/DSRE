@@ -17,22 +17,23 @@
 - attach camera to character (only movement, no rotation) => ok
 - add hud script from old project => ok
 - add hud widget and link life and pickup to character => ok
-- add sword and shield assets
+- add sword and shield assets => ok
 - activate/deactivate bCanBeHit and bCanHit with animNotify
 
 ## Next steps
 
 - use sm_cubes with collisions for floor and walls
-- add pickups
+- add pickups => ok
 - create foe (wolf from infinity blade)
 - migrate ai from old project (add nav mesh on floor)
-- use cel shading?
+- audio sound effects
 - create ludum dare account
 - create level01 map
 - fog of war
 
 ## Optional
 
+- audio music
 - cel shading
 - use plugin for lifebar
 - wall invisible/transparent when player is behind

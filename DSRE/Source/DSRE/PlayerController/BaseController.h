@@ -35,7 +35,7 @@ public:
 	UFUNCTION(BlueprintPure, Category = "Properties")
 		FORCEINLINE int32 GetPickup() const { return Pickup; };
 	UFUNCTION(Exec, BlueprintCallable, Category = "Properties")
-		void AddPickup(float amountToAdd = 1) { Pickup += amountToAdd; };
+		void AddPickup(int32 amountToAdd = 1) { Pickup += amountToAdd; };
 	UFUNCTION(Exec, BlueprintCallable, Category = "Properties")
 		void ResetPickup() { Pickup = 0; };
 
