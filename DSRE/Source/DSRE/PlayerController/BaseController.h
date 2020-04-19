@@ -28,7 +28,7 @@ public:
 	UFUNCTION(BlueprintPure, Category = "Properties")
 		FORCEINLINE float GetMaxLife() const { return MaxLifeValue; };
 	UFUNCTION(Exec, BlueprintCallable, Category = "Properties")
-		void AddLife(float amountToAdd = -1.f) { Life += amountToAdd; };
+		void AddLife(float amountToAdd = -10.f) { Life += amountToAdd; };
 	UFUNCTION(Exec, BlueprintCallable, Category = "Properties")
 		void ResetLife() { Life = MaxLifeValue; };
 
@@ -38,6 +38,11 @@ public:
 		void AddPickup(int32 amountToAdd = 1) { Pickup += amountToAdd; };
 	UFUNCTION(Exec, BlueprintCallable, Category = "Properties")
 		void ResetPickup() { Pickup = 0; };
+
+	UFUNCTION(Exec, BlueprintCallable, Category = "Properties")
+		FORCEINLINE float GetAttackNormalDamage() const { return AttackNormalDamage; };
+	UFUNCTION(Exec, BlueprintCallable, Category = "Properties")
+		FORCEINLINE float GetAttackStrongDamage() const { return AttackStrongDamage; };
 
 	UFUNCTION(BlueprintCallable, Category = "Properties")
 		void ResetProperties() { ResetLife(); ResetPickup(); };
@@ -58,4 +63,9 @@ protected:
 	UPROPERTY(VisibleAnywhere, Category = "Pickups")
 		uint32 Pickup = 0;
 
+	//TODO: move damage to character or even to sword
+	UPROPERTY(EditAnywhere, Category = "Combat")
+		float AttackNormalDamage = -10.f;
+	UPROPERTY(EditAnywhere, Category = "Combat")
+		float AttackStrongDamage = -20.f;
 };

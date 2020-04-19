@@ -67,12 +67,12 @@ void AGM_BasicCombat::BeginPlay()
 	// Stop if there is an error
 	if (!PController)
 	{
-		UE_LOG(LogTemp, Error, TEXT("Game can't be played, exiting"));
+		UE_LOG(LogTemp, Log, TEXT("Game can't be played, exiting"));
 		GameOver();
 	}
 	else
 	{
-		bHasStartedPlaying = false;
+		bHasStartedPlaying = true;
 		bIsGameOver = false;
 		PController->SetInputMode(FInputModeGameOnly());
 		HUDBase->ShowCursor(PController, true);
@@ -84,7 +84,7 @@ void AGM_BasicCombat::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	// game over?
-	if ( bHasStartedPlaying && !bIsGameOver)
+	if (PController && PController->GetLife() <= 0 && bHasStartedPlaying && !bIsGameOver)
 	{
 		GameOver();
 	}

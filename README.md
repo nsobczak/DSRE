@@ -1,12 +1,16 @@
-# TODO:
+# Game for Ludum Dare 46
 
-## _Keep it alive_ idea
+## _Keep it pumping_ idea
 
-
-- **Goal:** pick up some object to keep your love alive
+- **Goal:** pick up heart sections to keep your heart pumping
 - top down isometric 3rd person (camera follow character in 1st prototype)
+- you're inside the heart and have to bring back heart sections to the middle
+- heart sections can be access through veins
+- some enemies are blocking the veins
 - 2 actions: attack (sword), guard (shield)
 - life w/ hearts
+
+# TODO:
 
 ## Init
 
@@ -25,7 +29,7 @@
 - add pickups => ok
 - create foe (wolf from infinity blade) => ok
 - create ai (see old project + add nav mesh on floor) => ok
-- add damage
+- add damage => ok
 - audio sound effects (footsteps => ok, pickups => ok, impacts)
 - create ludum dare account => ok
 - create level01 map (sm_cubes with collisions for floor and walls)
@@ -47,3 +51,16 @@
 ## Before Build
 
 - change inputs to qwerty
+
+## Publish
+
+- add credits
+- add screenshots
+
+## World assets
+- Heart room
+- straight line
+- corner right
+- corner left
+- T
+- room squared
