@@ -51,10 +51,11 @@ You have to go inside your heart to fight the beast and bring back the 4 heart s
 
 ## Optional
 
+- improve combat system
 - audio music: heart pumping sound => ok
+- use plugin for lifebar => ok
 - make fonts breath
 - cel shading/ outline?
-- use plugin for lifebar => ok
 - add lights
 - add fog of war
 - wall invisible/transparent when player is behind (do it with inverted normals?) => ok (maybe better to use small cubes instead)
