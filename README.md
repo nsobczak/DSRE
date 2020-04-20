@@ -4,21 +4,11 @@ _Ludum Dare 46 - Theme: Keep it alive_
 
 ## Idea
 
-- **Goal:** pick up heart sections to keep your heart pumping
-- top down isometric 3rd person (camera follow character in 1st prototype)
-- you're inside the heart and have to bring back heart sections to the middle
-- heart sections can be access through veins
-- some enemies are blocking the veins
-- 2 actions: attack (sword), guard (shield)
-- life w/ hearts
-
-## Scripts
-
-**Intro:**
-
 Wild beasts appeared in your heart, they stole heart sections and escaped in the veins.
 
 You have to go inside your heart to fight the beast and bring back the 4 heart sections in order to keep the heart beating.
+
+![gameplay_image](Media/Gameplay04.PNG)
 
 ## Controls
 
@@ -29,6 +19,14 @@ You have to go inside your heart to fight the beast and bring back the 4 heart s
 - Pause with escape or del or start button from gamepad
 
 # TODO:
+
+- **Goal:** pick up heart sections to keep your heart pumping
+- top down isometric 3rd person (camera follow character in 1st prototype)
+- you're inside the heart and have to bring back heart sections to the middle
+- heart sections can be access through veins
+- some enemies are blocking the veins
+- 2 actions: attack (sword), guard (shield)
+- life w/ hearts
 
 ## Init
 
@@ -52,11 +50,11 @@ You have to go inside your heart to fight the beast and bring back the 4 heart s
 - create ludum dare account => ok
 - create level01 map (sm_cubes with collisions for floor and walls, navmesh) => ok
 - character orientation => ok
-- enemy walk anim
+- enemy walk anim => ok
 - add intro screen with explanations => ok
 - add win screen => ok
 - build game => ok
-- upload game
+- upload game => ok
 
 ## Optional
 
@@ -77,8 +75,8 @@ You have to go inside your heart to fight the beast and bring back the 4 heart s
 
 ## Publish
 
-- add credits
-- add screenshots
+- add credits => ok
+- add screenshots => ok
 
 ## World assets
 - Heart room (with entries) => ok
