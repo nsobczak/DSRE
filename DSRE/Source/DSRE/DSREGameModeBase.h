@@ -33,6 +33,8 @@ protected:
 	virtual void InitParamPointers();
 	virtual void BeginPlay() override;
 	UFUNCTION(BlueprintCallable, Category = "GameMode_Flow")
+		virtual void Win();
+	UFUNCTION(BlueprintCallable, Category = "GameMode_Flow")
 		virtual void GameOver();
 
 	UPROPERTY(VisibleAnywhere, Category = "GameMode_Flow", AdvancedDisplay)

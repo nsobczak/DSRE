@@ -25,6 +25,7 @@ public:
 protected:
 	virtual void InitParamPointers() override;
 	virtual void BeginPlay() override;
+	virtual void Win() override;
 	virtual void GameOver() override;
 
 	UPROPERTY(VisibleAnywhere, Category = "Debug", AdvancedDisplay)

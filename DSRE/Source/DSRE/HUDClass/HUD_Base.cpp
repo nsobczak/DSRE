@@ -29,8 +29,11 @@ void AHUD_Base::BeginPlay()
 		case EHudWidget::FHW_PAUSE:
 			ShowPauseWidget();
 			break;
-		case EHudWidget::FHW_END:
+		case EHudWidget::FHW_END_WIN:
 			ShowEndingWidget();
+			break;
+		case EHudWidget::FHW_END_GO:
+			ShowGameOverWidget();
 			break;
 		default:
 			break;
@@ -81,8 +84,12 @@ bool AHUD_Base::IsShowingWidget(EHudWidget widgetToLookFor)
 		return CurrentWidgetClass == PauseWidgetClass;
 		break;
 
-	case EHudWidget::FHW_END:
+	case EHudWidget::FHW_END_WIN:
 		return CurrentWidgetClass == EndingWidgetClass;
+		break;
+
+	case EHudWidget::FHW_END_GO:
+		return CurrentWidgetClass == GameOverWidgetClass;
 		break;
 
 	default:
@@ -103,27 +110,6 @@ void AHUD_Base::ShowWidget(TSubclassOf<UUserWidget> NewWidgetClass)
 		}
 	}
 }
-
-void AHUD_Base::ShowStartingWidget()
-{
-	ChangeMenuWidget(StartingWidgetClass);
-}
-
-void AHUD_Base::ShowEndingWidget()
-{
-	ChangeMenuWidget(EndingWidgetClass);
-}
-
-void AHUD_Base::ShowPauseWidget()
-{
-	ChangeMenuWidget(PauseWidgetClass);
-}
-
-void AHUD_Base::ShowHUDWidget()
-{
-	ChangeMenuWidget(HUDWidget);
-}
-
 
 void AHUD_Base::HideWidget(UUserWidget* widgetToHide)
 {

@@ -5,6 +5,7 @@
 #include "Engine/World.h"
 
 #include "DSRE/PlayerController/BCController.h"
+#include "Components/AudioComponent.h"
 
 
 AGM_BasicCombat::AGM_BasicCombat()
@@ -45,15 +46,28 @@ void AGM_BasicCombat::InitParamPointers()
 }
 
 
+void AGM_BasicCombat::Win()
+{
+	Super::Win();
+
+	if (PController && HUDBase && !HUDBase->IsShowingWidget(EHudWidget::FHW_END_WIN))
+	{
+		PController->SetInputMode(FInputModeUIOnly());
+		PController->SetCinematicMode(true, false, false, true, true);
+		HUDBase->ShowEndingWidget();
+		HUDBase->ShowCursor(PController, true);
+	}
+}
+
 void AGM_BasicCombat::GameOver()
 {
 	Super::GameOver();
 
-	if (PController && HUDBase && !HUDBase->IsShowingWidget(EHudWidget::FHW_END))
+	if (PController && HUDBase && !HUDBase->IsShowingWidget(EHudWidget::FHW_END_GO))
 	{
 		PController->SetInputMode(FInputModeUIOnly());
-		//PController->SetCinematicMode(true, false, false, true, true);
-		HUDBase->ShowEndingWidget();
+		PController->SetCinematicMode(true, false, false, true, true);
+		HUDBase->ShowGameOverWidget();
 		HUDBase->ShowCursor(PController, true);
 	}
 }
@@ -77,11 +91,28 @@ void AGM_BasicCombat::BeginPlay()
 		PController->SetInputMode(FInputModeGameOnly());
 		HUDBase->ShowCursor(PController, true);
 	}
+
+	//audio
+	if (MapTheme)
+	{
+		CurrentTheme_AC = UGameplayStatics::SpawnSound2D(GetWorld(), MapTheme);
+		CurrentTheme_AC->SetUISound(true);
+		CurrentTheme_AC->FadeIn(1.f, 1.f);
+
+		UE_LOG(LogTemp, Warning, TEXT("started playing sound: "), *CurrentTheme_AC->GetName());
+
+	}
 }
 
 void AGM_BasicCombat::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	// win?
+	if (PController && PController->GetPickup() >= 4 && bHasStartedPlaying && !bIsGameOver)
+	{
+		Win();
+	}
 
 	// game over?
 	if (PController && PController->GetLife() <= 0 && bHasStartedPlaying && !bIsGameOver)

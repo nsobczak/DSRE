@@ -10,6 +10,15 @@
 - 2 actions: attack (sword), guard (shield)
 - life w/ hearts
 
+## Scripts
+
+**Intro:**
+
+Wild beasts appeared in your heart, they stole heart sections and escaped in the veins.
+
+You have to go inside your heart to fight the beast and bring back the 4 heart sections in order to keep the heart beating.
+
+
 # TODO:
 
 ## Init
@@ -35,8 +44,8 @@
 - create level01 map (sm_cubes with collisions for floor and walls, navmesh) => ok
 - character orientation => ok
 - enemy walk anim
-- add intro screen with explanations
-- add win screen
+- add intro screen with explanations => ok
+- add win screen => ok
 - build game
 - upload game
 

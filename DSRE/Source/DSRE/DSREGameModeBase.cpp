@@ -39,6 +39,17 @@ void ADSREGameModeBase::InitParamPointers()
 
 }
 
+void ADSREGameModeBase::Win()
+{
+	UE_LOG(LogTemp, Log, TEXT("Player won"));
+
+	//if (CurrentTheme_AC)
+	//	CurrentTheme_AC->FadeOut(5.f, 0);
+
+	bHasStartedPlaying = false;
+	bIsGameOver = true;
+}
+
 void ADSREGameModeBase::GameOver()
 {
 	UE_LOG(LogTemp, Log, TEXT("Game Over"));
@@ -66,7 +77,10 @@ void ADSREGameModeBase::BeginPlay()
 	{
 		CurrentTheme_AC = UGameplayStatics::SpawnSound2D(GetWorld(), MapTheme);
 		CurrentTheme_AC->SetUISound(true);
-		CurrentTheme_AC->FadeIn(1.0f);
+		CurrentTheme_AC->FadeIn(1.f, 1.f);
+
+		UE_LOG(LogTemp, Warning, TEXT("started playing sound: "), *CurrentTheme_AC->GetName());
+		
 	}
 }
 

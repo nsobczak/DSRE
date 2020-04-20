@@ -13,7 +13,8 @@ enum class EHudWidget : uint8
 	FHW_START UMETA(DisplayName = "Start widget"),
 	FHW_HUD UMETA(DisplayName = "HUD widget"),
 	FHW_PAUSE UMETA(DisplayName = "Pause widget"),
-	FHW_END UMETA(DisplayName = "End widget")
+	FHW_END_GO UMETA(DisplayName = "End widget game over"),
+	FHW_END_WIN UMETA(DisplayName = "End widget win")
 };
 
 
@@ -49,16 +50,19 @@ public:
 		void ShowWidget(TSubclassOf<UUserWidget> NewWidgetClass);
 
 	UFUNCTION(BlueprintCallable, Category = "Widget_Functions")
-		void ShowHUDWidget();
+		void ShowHUDWidget() { ChangeMenuWidget(HUDWidget); };
 
 	UFUNCTION(BlueprintCallable, Category = "Widget_Functions")
-		void ShowStartingWidget();
+		void ShowStartingWidget() { ChangeMenuWidget(StartingWidgetClass); };
 
 	UFUNCTION(BlueprintCallable, Category = "Widget_Functions")
-		void ShowEndingWidget();
+		void ShowGameOverWidget() { ChangeMenuWidget(GameOverWidgetClass); };
 
 	UFUNCTION(BlueprintCallable, Category = "Widget_Functions")
-		void ShowPauseWidget();
+		void ShowEndingWidget() { ChangeMenuWidget(EndingWidgetClass); };
+
+	UFUNCTION(BlueprintCallable, Category = "Widget_Functions")
+		void ShowPauseWidget() { ChangeMenuWidget(PauseWidgetClass); };
 
 	UFUNCTION(BlueprintCallable, Category = "Widget_Functions")
 		void HideWidget(UUserWidget* widgetToHide);
@@ -90,7 +94,11 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Widgets")
 		TSubclassOf<UUserWidget> PauseWidgetClass;
 
-	/** The widget class we will use as our menu when the game end. */
+	/** The widget class we will use as our menu when the game ends with a defeat. */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Widgets")
+		TSubclassOf<UUserWidget> GameOverWidgetClass;
+
+	/** The widget class we will use as our menu when the game ends with a victory. */
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Widgets")
 		TSubclassOf<UUserWidget> EndingWidgetClass;
 
