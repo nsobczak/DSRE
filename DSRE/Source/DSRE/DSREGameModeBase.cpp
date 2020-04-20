@@ -1,6 +1,7 @@
 #include "DSREGameModeBase.h"
 #include "Kismet/GameplayStatics.h"
 #include "Engine/World.h"
+#include "Components/AudioComponent.h"
 
 ADSREGameModeBase::ADSREGameModeBase()
 {
@@ -42,9 +43,11 @@ void ADSREGameModeBase::GameOver()
 {
 	UE_LOG(LogTemp, Log, TEXT("Game Over"));
 
+	if (CurrentTheme_AC)
+		CurrentTheme_AC->FadeOut(5.f, 0);
+
 	bHasStartedPlaying = false;
 	bIsGameOver = true;
-
 }
 
 void ADSREGameModeBase::BeginPlay()
@@ -56,6 +59,14 @@ void ADSREGameModeBase::BeginPlay()
 	if (HUDBase && PControllerBase)
 	{
 		HUDBase->ShowCursor(PControllerBase, true);
+	}
+
+	//audio
+	if (MapTheme)
+	{
+		CurrentTheme_AC = UGameplayStatics::SpawnSound2D(GetWorld(), MapTheme);
+		CurrentTheme_AC->SetUISound(true);
+		CurrentTheme_AC->FadeIn(1.0f);
 	}
 }
 

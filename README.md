@@ -32,19 +32,22 @@
 - add damage => ok
 - audio sound effects (footsteps => ok, pickups => ok, impacts)
 - create ludum dare account => ok
-- create level01 map (sm_cubes with collisions for floor and walls)
+- create level01 map (sm_cubes with collisions for floor and walls, navmesh)
 - character orientation => ok
 - enemy walk anim
+- add intro screen with explanations
+- add win screen
 - build game
 - upload game
 
 ## Optional
 
-- fog of war
-- audio music
+- audio music: heart pumping sound
+- make fonts breath
 - cel shading
 - use plugin for lifebar
-- wall invisible/transparent when player is behind
+- fog of war
+- wall invisible/transparent when player is behind (do it with inverted normals?)
 - add dash
 - lock enemy
 

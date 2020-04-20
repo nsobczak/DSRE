@@ -35,9 +35,9 @@ protected:
 	UFUNCTION(BlueprintCallable, Category = "GameMode_Flow")
 		virtual void GameOver();
 
-	UPROPERTY(VisibleAnywhere, Category = "Track", AdvancedDisplay)
+	UPROPERTY(VisibleAnywhere, Category = "GameMode_Flow", AdvancedDisplay)
 		bool bHasStartedPlaying = false;
-	UPROPERTY(VisibleAnywhere, Category = "Track", AdvancedDisplay)
+	UPROPERTY(VisibleAnywhere, Category = "GameMode_Flow", AdvancedDisplay)
 		bool bIsGameOver = false;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Debug", meta = (AllowPrivateAccess = "true"))
@@ -46,5 +46,14 @@ protected:
 	UPROPERTY(VisibleAnywhere, Category = "Debug", AdvancedDisplay)
 		class AHUD_Base* HUDBase;
 
+	UPROPERTY(VisibleAnywhere, Category = "Debug", AdvancedDisplay)
 	class APlayerController* PControllerBase;
+
+	/** Main theme for the map*/
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audio")
+		class USoundBase* MapTheme;
+
+	/** AudioComponent currently playing*/
+	UPROPERTY(BlueprintReadOnly, Category = "Audio")
+		class UAudioComponent* CurrentTheme_AC;
 };
