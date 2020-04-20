@@ -56,9 +56,9 @@ public:
 	UFUNCTION(BlueprintPure, Category = "State")
 		FORCEINLINE FText GetCurrentArea() const { return CurrentArea; };
 	UFUNCTION(Exec, BlueprintCallable, Category = "State")
-		void SetCurrentArea(FText name) { UE_LOG(LogTemp, Log, TEXT("SetCurrentArea called")); CurrentArea = name; };
+		void SetCurrentArea(FText name) { CurrentArea = name; };
 	UFUNCTION(BlueprintPure, Category = "State")
-		FORCEINLINE FText GetFinalArea() const { return FinalArea; };	
+		FORCEINLINE FText GetFinalArea() const { return FinalArea; };
 
 protected:
 	virtual void BeginPlay() override;
