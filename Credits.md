@@ -15,5 +15,5 @@
 
 ## UI
 
-- life bare from robobar unreal engine plugin
+- life bar from robobar unreal engine plugin
 - everything else by nsobczak

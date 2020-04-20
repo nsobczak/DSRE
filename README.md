@@ -1,8 +1,6 @@
-# _Keep your heart beating_
+# Keep your heart beating
 
-Game for Ludum Dare 46
-
-Theme: Keep it alive
+_Ludum Dare 46 - Theme: Keep it alive_
 
 ## Idea
 
