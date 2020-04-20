@@ -28,7 +28,7 @@ void AEnemyCharacter::AddLife(float amountToAdd)
 	Life += amountToAdd;
 	if (Life <= 0)
 	{
-		UE_LOG(LogTemp, Error, TEXT("Life <= 0, destroying %s"), *GetName());
+		UE_LOG(LogTemp, Log, TEXT("Life <= 0, destroying %s"), *GetName());
 		Destroy();
 	}
 };
