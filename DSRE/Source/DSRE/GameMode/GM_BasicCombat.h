@@ -31,4 +31,10 @@ protected:
 	UPROPERTY(VisibleAnywhere, Category = "Debug", AdvancedDisplay)
 		class ABCController* PController;
 
+	/** Static mesh plane for fog*/
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "FogOfWar")
+		class UStaticMeshComponent* FogPlane;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "FogOfWar")
+		float UnfogRadius = 5.f;
 };

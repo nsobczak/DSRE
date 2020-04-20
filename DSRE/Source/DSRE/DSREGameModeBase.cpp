@@ -78,9 +78,6 @@ void ADSREGameModeBase::BeginPlay()
 		CurrentTheme_AC = UGameplayStatics::SpawnSound2D(GetWorld(), MapTheme);
 		CurrentTheme_AC->SetUISound(true);
 		CurrentTheme_AC->FadeIn(1.f, 1.f);
-
-		UE_LOG(LogTemp, Warning, TEXT("started playing sound: "), *CurrentTheme_AC->GetName());
-		
 	}
 }
 

@@ -57,6 +57,8 @@ public:
 		FORCEINLINE FText GetCurrentArea() const { return CurrentArea; };
 	UFUNCTION(Exec, BlueprintCallable, Category = "State")
 		void SetCurrentArea(FText name) { UE_LOG(LogTemp, Log, TEXT("SetCurrentArea called")); CurrentArea = name; };
+	UFUNCTION(BlueprintPure, Category = "State")
+		FORCEINLINE FText GetFinalArea() const { return FinalArea; };	
 
 protected:
 	virtual void BeginPlay() override;
@@ -70,4 +72,7 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, Category = "State")
 		FText CurrentArea = FText::FromString("Area Name");
+
+	UPROPERTY(EditAnywhere, Category = "State")
+		FText FinalArea = FText::FromString("Heart");
 };

@@ -46,18 +46,18 @@ You have to go inside your heart to fight the beast and bring back the 4 heart s
 - enemy walk anim
 - add intro screen with explanations => ok
 - add win screen => ok
-- build game
+- build game => ok
 - upload game
 
 ## Optional
 
 - audio music: heart pumping sound => ok
 - make fonts breath
-- cel shading
+- cel shading/ outline?
 - use plugin for lifebar => ok
 - add lights
-- fog of war
-- wall invisible/transparent when player is behind (do it with inverted normals?)
+- add fog of war
+- wall invisible/transparent when player is behind (do it with inverted normals?) => ok (maybe better to use small cubes instead)
 - add dash
 - lock enemy
 
