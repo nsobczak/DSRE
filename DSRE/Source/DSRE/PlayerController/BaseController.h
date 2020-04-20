@@ -65,7 +65,7 @@ protected:
 
 	//TODO: move damage to character or even to sword
 	UPROPERTY(EditAnywhere, Category = "Combat")
-		float AttackNormalDamage = -10.f;
+		float AttackNormalDamage = -20.f;
 	UPROPERTY(EditAnywhere, Category = "Combat")
 		float AttackStrongDamage = -20.f;
 };

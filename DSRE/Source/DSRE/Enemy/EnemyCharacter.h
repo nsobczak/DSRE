@@ -51,7 +51,7 @@ protected:
 	UPROPERTY(VisibleAnywhere, Category = "Life")
 		float Life;
 
-	UPROPERTY(VisibleAnywhere, Category = "Combat")
+	UPROPERTY(EditAnywhere, Category = "Combat")
 		float AttackDamage = -20.f;
 
 	UPROPERTY(VisibleAnywhere, Category = "Combat")

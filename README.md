@@ -51,7 +51,7 @@ You have to go inside your heart to fight the beast and bring back the 4 heart s
 
 ## Optional
 
-- improve combat system
+- improve combat system => ok
 - audio music: heart pumping sound => ok
 - use plugin for lifebar => ok
 - make fonts breath
