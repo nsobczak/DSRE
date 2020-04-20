@@ -18,7 +18,9 @@ You have to go inside your heart to fight the beast and bring back the 4 heart s
 - Defend with E or right mouse button or gamepad left shoulder (still no animation but it prevents taking damage)
 - Pause with escape or del or start button from gamepad
 
-# TODO:
+
+_____________________
+## TODO:
 
 - **Goal:** pick up heart sections to keep your heart pumping
 - top down isometric 3rd person (camera follow character in 1st prototype)
@@ -28,7 +30,7 @@ You have to go inside your heart to fight the beast and bring back the 4 heart s
 - 2 actions: attack (sword), guard (shield)
 - life w/ hearts
 
-## Init
+### Init
 
 - create empty project => ok
 - create maps: menu => ok, playground => ok
@@ -40,7 +42,7 @@ You have to go inside your heart to fight the beast and bring back the 4 heart s
 - add sword and shield assets => ok
 - activate/deactivate bCanBeHit and bCanHit with animNotify => ok
 
-## Next steps
+### Next steps
 
 - add pickups => ok
 - create foe (wolf from infinity blade) => ok
@@ -56,7 +58,7 @@ You have to go inside your heart to fight the beast and bring back the 4 heart s
 - build game => ok
 - upload game => ok
 
-## Optional
+### Optional
 
 - improve combat system => ok
 - audio music: heart pumping sound => ok
@@ -69,16 +71,16 @@ You have to go inside your heart to fight the beast and bring back the 4 heart s
 - add dash
 - lock enemy
 
-## Before Build
+### Before Build
 
 - change inputs to qwerty => ok
 
-## Publish
+### Publish
 
 - add credits => ok
 - add screenshots => ok
 
-## World assets
+### World assets
 - Heart room (with entries) => ok
 - vein straight lines (x2) => ok
 - vein corners (x4) => ok
