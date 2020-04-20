@@ -53,6 +53,11 @@ public:
 	UFUNCTION(Exec, BlueprintCallable, Category = "State")
 		void SetCanBeHit(bool canBeHit) { bCanBeHit = canBeHit; };
 
+	UFUNCTION(BlueprintPure, Category = "State")
+		FORCEINLINE FText GetCurrentArea() const { return CurrentArea; };
+	UFUNCTION(Exec, BlueprintCallable, Category = "State")
+		void SetCurrentArea(FText name) { UE_LOG(LogTemp, Log, TEXT("SetCurrentArea called")); CurrentArea = name; };
+
 protected:
 	virtual void BeginPlay() override;
 
@@ -63,4 +68,6 @@ protected:
 	UPROPERTY(VisibleAnywhere, Category = "State")
 		bool bCanBeHit = true;
 
+	UPROPERTY(VisibleAnywhere, Category = "State")
+		FText CurrentArea = FText::FromString("Area Name");
 };

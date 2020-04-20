@@ -32,7 +32,7 @@
 - add damage => ok
 - audio sound effects (footsteps => ok, pickups => ok, impacts)
 - create ludum dare account => ok
-- create level01 map (sm_cubes with collisions for floor and walls, navmesh)
+- create level01 map (sm_cubes with collisions for floor and walls, navmesh) => ok
 - character orientation => ok
 - enemy walk anim
 - add intro screen with explanations
@@ -42,10 +42,11 @@
 
 ## Optional
 
-- audio music: heart pumping sound
+- audio music: heart pumping sound => ok
 - make fonts breath
 - cel shading
-- use plugin for lifebar
+- use plugin for lifebar => ok
+- add lights
 - fog of war
 - wall invisible/transparent when player is behind (do it with inverted normals?)
 - add dash
@@ -61,9 +62,8 @@
 - add screenshots
 
 ## World assets
-- Heart room
-- vein straight line
-- vein corner right
-- vein corner left
-- vein T
-- vein room squared
+- Heart room (with entries) => ok
+- vein straight lines (x2) => ok
+- vein corners (x4) => ok
+- vein T (x4) => ok
+- vein U (x4) => ok
