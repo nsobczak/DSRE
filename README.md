@@ -1,6 +1,10 @@
-# Game for Ludum Dare 46
+# _Keep your heart beating_
 
-## _Keep it pumping_ idea
+Game for Ludum Dare 46
+
+Theme: Keep it alive
+
+## Idea
 
 - **Goal:** pick up heart sections to keep your heart pumping
 - top down isometric 3rd person (camera follow character in 1st prototype)
@@ -18,6 +22,13 @@ Wild beasts appeared in your heart, they stole heart sections and escaped in the
 
 You have to go inside your heart to fight the beast and bring back the 4 heart sections in order to keep the heart beating.
 
+## Controls
+
+- Click on buttons with left mouse button
+- Move your character with WASD or arrows or left stick from gamepad
+- Attack with Q or left mouse button or gamepad right shoulder
+- Defend with E or right mouse button or gamepad left shoulder (still no animation but it prevents taking damage)
+- Pause with escape or del or start button from gamepad
 
 # TODO:
 
@@ -64,7 +75,7 @@ You have to go inside your heart to fight the beast and bring back the 4 heart s
 
 ## Before Build
 
-- change inputs to qwerty
+- change inputs to qwerty => ok
 
 ## Publish
 
